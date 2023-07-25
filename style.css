@@ -1,0 +1,329 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Titillium+Web&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Titillium+Web&family=Ubuntu:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Tektur:wght@600&family=Titillium+Web&family=Ubuntu:wght@500&display=swap');
+
+*{
+
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* ==================== HEADING =================================== */
+
+
+.parent #title{
+
+    /* border: 2px solid red; */
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -30px;
+    color: #71eeff;
+    font-family:cursive;
+    font-size: 2.2rem;
+
+}
+
+
+
+
+
+
+/* ======================== BODY========================================== */
+
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: rgb(115 119 117); */
+    background: linear-gradient(to top left, rgb(32 32 52),rgb(172 120 67));
+}
+
+
+/* ======================== CHILD ========================================== */
+
+.child{
+
+    position: relative; 
+    width:550px;
+    height: 600px;
+    background: rgb(67, 67, 61);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+/* ======================== BEFORE AND AFTER CLASS ========================================== */
+.child::before{
+
+    content: '';
+    position: absolute;
+    width:850px;
+    height: 850px;
+    background-image: conic-gradient(transparent,
+    transparent,transparent, rgb(11, 154, 221));
+
+    animation: animation1 4s linear infinite;
+}
+
+.child::after{
+
+    content: '';
+    position: absolute;
+    width:850px;
+    height: 850px;
+    background-image: conic-gradient(transparent,
+    transparent,transparent, rgb(227, 12, 195));
+
+    animation: animation1 4s linear infinite;
+    animation-delay: -2s;
+}
+
+
+
+
+/* ======================== SPAN ========================================== */
+
+.child span{
+
+    position:absolute;
+    inset:5px;
+    border-radius: 18px;
+    background: black;
+    z-index: 1;
+}
+
+
+ /* ======================== INPUT SECTION ========================================== */
+
+
+/* .section1{
+
+    display: flex;
+    flex-direction: column;
+} */
+
+
+
+
+
+.section1 p{
+
+
+    position: relative;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    left: 78px;
+    top: -15px;
+
+}
+
+
+.section1 #url{
+
+    position: relative;
+    z-index: 2;
+    color: black;
+    margin: 10px 5px;
+    padding: 6px 8px;
+    border: 2px solid #1d0af5;
+    outline: none;
+    border-radius: 10px;
+    min-width: 350px;
+    min-height: 6vh;
+    background-color: rgb(255, 255, 255);
+    left:70px;
+}
+.section1 #short_btn{
+
+    position: relative;
+    z-index: 2;
+    left: 77px;
+    border-radius: 9px;
+    margin: 0px 0px;
+    padding: 8px 8px;
+    background-color:  #eba130db;
+    color: #fefefe;
+    cursor: pointer;
+    outline: none;
+    transition: .3s;  
+}
+
+.section1 #short_btn:active{
+   transform: translateY(.12rem);
+   background-color: rgb(232, 149, 6);
+   font-weight: bold;
+}
+
+
+
+
+.section1 #copy{
+
+    position: relative;
+    z-index: 2;
+    color: black;
+    margin: 10px 5px;
+    padding: 6px 8px;
+    border: 2px solid #216ddd;
+    outline: none;
+    border-radius: 10px;
+    min-width: 350px;
+    background-color: rgb(255, 255, 255);
+    left:70px;
+    
+}
+.section1 #copy_btn .material-symbols-outlined{
+
+    position: relative;
+    z-index: 2;
+    left: 11px;
+    top: 8px;
+    font-size: 1.7rem;
+    background-color: #03A9F4;
+    cursor: pointer;
+    transition: .3s;
+    width: 3rem;
+    border-radius: 5px;
+    
+}
+
+/* .section1 #copy_btn .material-symbols-outlined:hover{
+
+   transform:translateX(.05rem);
+   background-color: #2ea6e2;
+    
+} */
+.section1 #copy_btn .material-symbols-outlined:active{
+
+   transform:translateX(.06rem);
+   background-color: #2ea6e2;
+    
+}
+
+
+
+/* ======================== KEYFRAMES ========================================== */
+
+@keyframes animation1
+{
+  0%
+  {
+    transform:rotate(0deg);
+
+  }
+
+  100%{
+
+    transform: rotate(360deg);
+  }
+
+
+
+}
+
+
+
+/* ======================== RESPONSIVE ========================================== */
+
+
+
+ /* ============================================ SMALL DEVICES================================= */
+
+@media only screen and (max-width:565px){
+
+   .child{
+    width: 280px;
+    height: 500px;
+
+   }
+
+   .section1 p {
+
+    font-size: 0.8rem;
+    left: 29px;
+    
+}
+
+.section1 #url {
+    min-width: 200px;
+    min-height: 3vh;
+    left: 15px;
+}
+
+
+
+.section1 #short_btn {
+    position: relative;
+    z-index: 2;
+    left: 180px;
+    top: 6px;
+
+}
+
+.section1 #copy {
+
+    min-width: 208px;
+   
+    left: 18px;
+    top: 20px;
+}
+
+
+.section1 #copy_btn .material-symbols-outlined {
+ 
+    left: 189px;
+    top: -20px;
+    height: 2vh;
+   
+}
+
+
+}
+
+
+
+/* ----------------- 2K RESOLUTION (2848 X 1152,   2848 X 1536) --------------- */
+
+
+@media screen and (min-width:2048px) {
+
+    body {
+
+        zoom: 1.7;
+    }
+
+}
+
+
+
+
+
+/* ----------------- 4K RESOLUTION (3840 X 2160,   4896 X 2160) --------------- */
+
+@media screen and (min-width:3840px) {
+
+    body {
+
+        zoom: 2.3;
+    }
+
+}
+
